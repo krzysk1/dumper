@@ -14,7 +14,6 @@
                 <[bool][CompensatedVariometer][false]>
                 <[string8][PowerPosition][ThrottleInput.Output]>
                 <[string8][Airspeed][AirspeedIndicator.IndicatedAirspeed]>
-                <[string8][AirbrakePosition][0.0]>
                 <[string8][BrakePosition][BrakeInput.Output]>
                 <[string8][GearPosition][GearInput.Output]>
                 <[tmvector3d][LookAtPosition][ 0.0 0.0 3.5 ]>
@@ -24,7 +23,7 @@
 
             <[camera][CameraFollow][]
                 <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][ -15.6000 0.0 1. ]>
+                <[tmvector3d][R0][ -15.6 0.0 1. ]>
                 <[tmvector3d][Direction][1.0 0.0 0.0]>
             >
             <[camera_head][CameraPilot][]
@@ -158,27 +157,31 @@
             <[collisionhull][CollisionLeftFrontGear][]
                 <[string8][Body][LeftFrontGear]>
                 <[string8][Geometry][tire1]>
-                <[float64][K][7880000]>
-                <[float64][D][163200]>
+                <[float64][K][780800]>
+                <[float64][D][1632]>
+                <[bool][CrashOnContact][false]>				
             >
             <[collisionhull][CollisionRightFrontGear][]
                 <[string8][Body][RightFrontGear]>
                 <[string8][Geometry][tire3]>
-                <[float64][K][7880000]>
-                <[float64][D][163200]>
+                <[float64][K][788000]>
+                <[float64][D][1632]>
+                <[bool][CrashOnContact][false]>				
             >
             <[collisionhull][CollisionLeftRearGear][]
                 <[string8][Body][LeftRearGear]>
                 <[string8][Geometry][tire2]>
-                <[float64][K][17880000]>
-                <[float64][D][163200]>
+                <[float64][K][1788000]>
+                <[float64][D][1632]>
+                <[bool][CrashOnContact][false]>				
             >
             <[collisionhull][CollisionRightRearGear][]
                 <[string8][Body][RightRearGear]>
                 <[string8][Geometry][tire4]>
-                <[float64][K][17880000]>
-                <[float64][D][163200]>
-            >		
+                <[float64][K][1788000]>
+                <[float64][D][1632]>
+                <[bool][CrashOnContact][false]>				
+            >	
             <[wheel][LeftFrontWheelHull][]
                 <[float64][K][1844000]>
                 <[float64][D][13300]>
@@ -282,12 +285,8 @@
                 <[string8][Input][GearInput.Output]>
                 <[string8][Message][Controls.Gear]>
             >
-             <[sender][SenderGearPosition][]
-                <[string8][Input][ServoGearSequence.Output]>
-                <[string8][Message][Aircraft.Gear]>
-            >
             <[input_default][DumpInput][]
-                <[string8][Input][Controls.GliderEngine]>
+                <[string8][Input][Controls.Flaps]>
             >		
             <[input_default][LightInput][]
                 <[string8][Input][Controls.HookRelease]>
@@ -351,23 +350,20 @@
                 <[float64tmarray][InputPosition][ 0.1 0.2 ]>
                 <[float64tmarray][OutputPosition][ 0 1 ]>
             >
-
-
-            // Engines
-
             <[output_free][ServoLightOutput][]
                 <[string8][Input][ServoLight.Output]>
             >
+			
+            // Engines			
             <[turbofan][Engine][]
                 <[string8][Body][Fuselage]>
-                <[float64][MaximumThrust][37460.0]>
+                <[float64][MaximumThrust][137460.0]>
                 <[tmvector3d][R0][-0.2 0.0 1.56]>
                 <[string8][ThrottleControl][ServoThrottle.Output]>
                 <[string8][ThrustReverseControl][ServoReverseGear.Output]>			
                 <[float64][RotationInertia][0.0001]>
                 <[float64][IdleFraction][0.001]>
             >
-
 
             // Indicators & outputs
 
@@ -419,9 +415,6 @@
             <[output][HeadingAngle][]
                 <[string8][Input][HeadingIndicator.MagneticHeading]>
             >
-            <[output][RateOfTurn][]
-                <[string8][Input][TurnCoordinator.RateOfTurn]>
-            >
             <[output][OutsideAirTemperature][]
                 <[string8][Input][TemperatureSensor.Temperature]>
             >
@@ -461,7 +454,7 @@
                 <[uint32][PositionID][LeftFrontGear.R]>
                 <[uint32][OrientationID][LeftFrontGear.Q]>
                 <[uint32][AngleID][LeftFrontWheelHull.RotationAngle]>
-                <[tmvector3d][Axis][0.0 1.0 0.0]>
+                <[tmvector3d][Axis][0.0 -1.0 0.0]>
                 <[tmvector3d][Pivot][2.5509	2.7608 1.52855]>
             >			
             <[hingedbodygraphics][LeftRearWheel][]
@@ -469,7 +462,7 @@
                 <[uint32][PositionID][LeftRearGear.R]>
                 <[uint32][OrientationID][LeftRearGear.Q]>
                 <[uint32][AngleID][LeftRearWheelHull.RotationAngle]>
-                <[tmvector3d][Axis][0.0 1.0 0.0]>
+                <[tmvector3d][Axis][0.0 -1.0 0.0]>
                 <[tmvector3d][Pivot][-3.2452 2.85795 1.53225]>
             >
             <[hingedbodygraphics][RightFrontWheel][]
@@ -477,7 +470,7 @@
                 <[uint32][PositionID][RightFrontGear.R]>
                 <[uint32][OrientationID][RightFrontGear.Q]>
                 <[uint32][AngleID][RightFrontWheelHull.RotationAngle]>
-                <[tmvector3d][Axis][0.0 1.0 0.0]>
+                <[tmvector3d][Axis][0.0 -1.0 0.0]>
                 <[tmvector3d][Pivot][2.5507	-2.8071	1.53045]>
             >
             <[hingedbodygraphics][RightRearWheel][]
@@ -485,7 +478,7 @@
                 <[uint32][PositionID][RightRearGear.R]>
                 <[uint32][OrientationID][RightRearGear.Q]>
                 <[uint32][AngleID][RightRearWheelHull.RotationAngle]>
-                <[tmvector3d][Axis][0.0 1.0 0.0]>
+                <[tmvector3d][Axis][0.0 -1.0 0.0]>
                 <[tmvector3d][Pivot][-3.245	-2.9075	1.53425]>
             >
             <[hingedbodygraphics][Dump][]
