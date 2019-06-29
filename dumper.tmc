@@ -1,0 +1,21 @@
+﻿<[file][][]
+    <[object][][]
+        <[int][Version][210]>
+        <[vec32array][ContactSpheres][ (2.551 2.78 1.531 1.531) (-3.245	2.875 1.531 1.531) (2.551 -2.78 1.531 1.531) (-3.245 -2.875 1.531 1.531) ]>
+        <[string8][DisplayName][Caterpillar 257M]>
+        <[string8][DescriptionTextEN][Caterpillar 257 M.
+Made by Krzysztof Kaniewski. 3D model: .]>
+		<[float64][WingSpan][2.0]>
+		<[float64][Mass][25000]>
+		<[float64][MaximumSpeed][11]>
+		<[float64][MinimumSpeed][0.0]>
+        <[float64][ApproachSpeed][21.0]>
+        <[float64][CruiseSpeed]  [56.0]>
+		<[tmvector2d][NormalSpeedRange][ 0 7.0 ]>
+		<[tmvector2d][CautionSpeedRange][ 7.0 11 ]>
+		<[tmvector2d][FlapSpeedRange][ 0.0 0.0 ]>
+        <[float64][MaximumAltitude][0.0]>
+        <[float64][CruiseAltitude] [0.0]>
+		<[string8][Pilot][]>
+    >
+>
