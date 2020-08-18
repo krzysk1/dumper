@@ -4,7 +4,7 @@
 	// Plane: Dump truck
 	// Compilation: Krzysztof Kaniewski
 	// 3D model: 
-	// Date: Mon Mar 30 2015; June 2019
+	// Date: Mon Mar 30 2015; June 2019; Aug 2020
 	//-------------------------------------  
 
     <[modelmanager][][]
@@ -156,28 +156,28 @@
             >
             <[collisionhull][CollisionLeftFrontGear][]
                 <[string8][Body][LeftFrontGear]>
-                <[string8][Geometry][tire1]>
+                <[string8][Geometry][Tire1]>
                 <[float64][K][780800]>
                 <[float64][D][1632]>
                 <[bool][CrashOnContact][false]>				
             >
             <[collisionhull][CollisionRightFrontGear][]
                 <[string8][Body][RightFrontGear]>
-                <[string8][Geometry][tire3]>
+                <[string8][Geometry][Tire3]>
                 <[float64][K][788000]>
                 <[float64][D][1632]>
                 <[bool][CrashOnContact][false]>				
             >
             <[collisionhull][CollisionLeftRearGear][]
                 <[string8][Body][LeftRearGear]>
-                <[string8][Geometry][tire2]>
+                <[string8][Geometry][Tire2]>
                 <[float64][K][1788000]>
                 <[float64][D][1632]>
                 <[bool][CrashOnContact][false]>				
             >
             <[collisionhull][CollisionRightRearGear][]
                 <[string8][Body][RightRearGear]>
-                <[string8][Geometry][tire4]>
+                <[string8][Geometry][Tire4]>
                 <[float64][K][1788000]>
                 <[float64][D][1632]>
                 <[bool][CrashOnContact][false]>				
@@ -439,18 +439,18 @@
         >
         <[pointer_list_tmgraphics][GraphicObjects][]
             <[rigidbodygraphics][Fuselage][]
-                <[string8][GeometryList][ part part01 part02 part03 part04 part05 part06 part08 ]>
+                <[string8][GeometryList][ Part Part01 Part02 Part03 Part04 Part05 Part06 Part08 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
             >
             <[rigidbodygraphics][driver][]
-                <[string8][GeometryList][ driver ]>
+                <[string8][GeometryList][ Driver ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][ShowInside][4]>     
             >
             <[hingedbodygraphics][LeftFrontWheel][]
-                <[string8][GeometryList][ tire1 tire101 ]>
+                <[string8][GeometryList][ Tire1 Tire101 ]>
                 <[uint32][PositionID][LeftFrontGear.R]>
                 <[uint32][OrientationID][LeftFrontGear.Q]>
                 <[uint32][AngleID][LeftFrontWheelHull.RotationAngle]>
@@ -458,7 +458,7 @@
                 <[tmvector3d][Pivot][2.5509	2.7608 1.52855]>
             >			
             <[hingedbodygraphics][LeftRearWheel][]
-                <[string8][GeometryList][ tire2 tire201 ]>
+                <[string8][GeometryList][ Tire2 Tire201 ]>
                 <[uint32][PositionID][LeftRearGear.R]>
                 <[uint32][OrientationID][LeftRearGear.Q]>
                 <[uint32][AngleID][LeftRearWheelHull.RotationAngle]>
@@ -466,7 +466,7 @@
                 <[tmvector3d][Pivot][-3.2452 2.85795 1.53225]>
             >
             <[hingedbodygraphics][RightFrontWheel][]
-                <[string8][GeometryList][ tire3 tire301 ]>
+                <[string8][GeometryList][ Tire3 Tire301 ]>
                 <[uint32][PositionID][RightFrontGear.R]>
                 <[uint32][OrientationID][RightFrontGear.Q]>
                 <[uint32][AngleID][RightFrontWheelHull.RotationAngle]>
@@ -474,7 +474,7 @@
                 <[tmvector3d][Pivot][2.5507	-2.8071	1.53045]>
             >
             <[hingedbodygraphics][RightRearWheel][]
-                <[string8][GeometryList][ tire4 tire401 ]>
+                <[string8][GeometryList][ Tire4 Tire401 ]>
                 <[uint32][PositionID][RightRearGear.R]>
                 <[uint32][OrientationID][RightRearGear.Q]>
                 <[uint32][AngleID][RightRearWheelHull.RotationAngle]>
@@ -482,7 +482,7 @@
                 <[tmvector3d][Pivot][-3.245	-2.9075	1.53425]>
             >
             <[hingedbodygraphics][Dump][]
-                <[string8][GeometryList][ dump dump01 ]>
+                <[string8][GeometryList][ Dump Dump01 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][AngleID][ServoDump.Output]>
@@ -562,3 +562,4 @@
                 <[float64][Displacement][0.05856]>
             >	
 >
+
