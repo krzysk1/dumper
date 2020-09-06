@@ -33,12 +33,6 @@
                 <[tmvector3d][Direction][ 1.0 0.0 0.0 ]>
                 <[bool][InCockpit][true]>
             >
-            <[camera][CameraLeftWing][]
-                <[string8][Tags][Left]>
-                <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][ 1.7340 8.1940 -0.2447 ]>
-                <[tmvector3d][Direction][ -0.4350 -0.8989 0.0524 ]>
-            >
             <[camera][CameraRightWing][]
                 <[string8][Tags][Right]>
                 <[string8][Body][Fuselage]>
@@ -439,7 +433,7 @@
         >
         <[pointer_list_tmgraphics][GraphicObjects][]
             <[rigidbodygraphics][Fuselage][]
-                <[string8][GeometryList][ Part Part01 Part02 Part03 Part04 Part05 Part06 Part08 ]>
+                <[string8][GeometryList][ Part Part01 Part02 Part03 Part04 Part05 Part06 Part08 Part09 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
             >
@@ -494,72 +488,6 @@
         <[pointer_list_tmsound][SoundObjects][]
     
         >
-
     >
-    
-    
-    
-
-
-            // Engines
-
-    
-            <[multibody_joint][JointFuselageLeftRearGear][]
-                <[string8][Body0][Fuselage]>
-                <[string8][Body1][LeftRearGear]>
-                <[tmvector3d][X0][0.0 1.0 0.0]>
-                <[float64][Kp][0.0]>
-                <[float64][Kd][0.0]>
-                <[tmvector3d][R0][-3.245 0.875 1.531]>
-                <[uint32][Type][0]>
-            >		
-            <[aeropropeller][LeftPropeller][]
-                <[tmvector3d][R0][-3.245 2.875 1.531]>
-                <[tmvector3d][X0][0.0 1.0 0.0]>
-                <[tmvector3d][Y0][1.0 0.0 0.0]>
-                <[tmvector3d][Z0][0.0 0.0 1.0]>
-                <[float64][Radius][1.5]>
-                <[float64][Pitch][0.0]>
-                <[float64][Twist][0.0]>
-                <[float64][Inertia][0.000955]>
-                <[float64][LateralDragCoefficient][0.0]>
-               <[float64][LateralForceCoefficient][0.0]>			
-                <[string8][Body][LeftRearGear]>
-                <[string8][EngineRotationSpeed][DriveShaft.GetRotationSpeed]>
-                <[string8][AddTorque][DriveShaft.AddTorque]>
-                <[string8][AddInertia][DriveShaft.AddInertia]>			
-            >
-            <[multibody_joint][JointFuselageRightRearGear][]
-                <[string8][Body0][Fuselage]>
-                <[string8][Body1][RightRearGear]>
-                <[tmvector3d][X0][0.0 1.0 0.0]>
-                <[float64][Kp][0.0]>
-                <[float64][Kd][0.0]>
-                <[tmvector3d][R0][-3.245 -0.875 1.531]>
-                <[uint32][Type][0]>
-            >	
-            <[driveshaft][DriveShaft][]
-            >	
-            <[gear][Gear][]
-                <[string8][AddTorque0][DriveShaft.AddTorque]>
-                <[string8][AddInertia0][DriveShaft.AddInertia]>
-                <[string8][RotationSpeed0][DriveShaft.GetRotationSpeed]>
-                <[float64][ReductionRatio][22.75]>
-                <[float64][Efficiency][1.0]> 
-                <[bool][FreeWheel][false]>
-            >
-    	
-            <[engine][Engine][]
-                <[string8][ThrottleControl][ServoThrottle.Output]>
-                <[float64][RotationInertia][0.900000]>
-                <[float64][ThrottleIdle][0.100000]>
-                <[string8][RotationSpeed][Gear.GetRotationSpeed1]>
-                <[string8][AddTorque][Gear.AddTorque1]>
-                <[string8][AddInertia][Gear.AddInertia1]>
-                <[float64][Friction][50.0]>
-                <[float64][RatedRotationSpeed][505.0]>
-                <[float64][RatedPower][111082000]>
-                <[float64][Displacement][0.05856]>
-            >	
 >
 
